@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'Évolution des Ordinateurs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        header {
+            background-color: #3498db;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            transition: background-color 0.3s;
+        }
+        main {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #2980b9;
+            border-bottom: 2px solid #2980b9;
+            padding-bottom: 5px;
+            transition: color 0.3s, border-color 0.3s;
+        }
+        h3 {
+            color: #2c3e50;
+            transition: color 0.3s;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 15px auto;
+            border-radius: 5px;
+        }
+        .machine {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-left: 3px solid #3498db;
+            background-color: #f9f9f9;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            transition: background-color 0.3s;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+            transition: background-color 0.3s;
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #7f8c8d;
+            transition: color 0.3s;
+        }
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #3498db;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+            transition: background-color 0.3s;
+        }
+        .container {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+        .container::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -17px;
+            background-color: white;
+            border: 4px solid #3498db;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+        .left {
+            left: 0;
+        }
+        .right {
+            left: 50%;
+        }
+        .left::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            right: 30px;
+            border: medium solid #f9f9f9;
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent #f9f9f9;
+            transition: border-color 0.3s;
+        }
+        .right::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            left: 30px;
+            border: medium solid #f9f9f9;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent #f9f9f9 transparent transparent;
+            transition: border-color 0.3s;
+        }
+        .right::after {
+            left: -16px;
+        }
+        .content {
+            padding: 20px 30px;
+            background-color: white;
+            position: relative;
+            border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+        @media screen and (max-width: 600px) {
+            .timeline::after {
+                left: 31px;
+            }
+            .container {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            .container::before {
+                left: 60px;
+                border: medium solid white;
+                border-width: 10px 10px 10px 0;
+                border-color: transparent white transparent transparent;
+            }
+            .left::after, .right::after {
+                left: 15px;
+            }
+            .right {
+                left: 0%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>L'Évolution des Ordinateurs</h1>
+        <p>De Konrad Zuse aux ordinateurs familiaux des années 80</p>
+    </header>
+    
+    <main>
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <p>Les ordinateurs que nous connaissons aujourd'hui sont le résultat d'une évolution technologique fascinante qui a débuté au milieu du XXe siècle. Ce site retrace les grandes étapes de cette évolution, depuis les premières machines mécaniques jusqu'aux premiers ordinateurs personnels.</p>
+        </section>
+
+        <section id="pionniers">
+            <h2>Les Pionniers</h2>
+            
+            <div class="machine">
+                <h3>Konrad Zuse et le Z1 (1938)</h3>
+                <p>Konrad Zuse, ingénieur allemand, conçoit en 1938 le Z1, considéré comme le premier ordinateur programmable au monde. Cette machine était entièrement mécanique et utilisait un système binaire pour ses calculs.</p>
+                <p><strong>Caractéristiques du Z1 :</strong></p>
+                <ul>
+                    <li>Calculateur mécanique programmable</li>
+                    <li>Fonctionnement basé sur le système binaire</li>
+                    <li>Mémoire de 64 mots de 22 bits</li>
+                    <li>Vitesse : environ 1 opération par seconde</li>
+                </ul>
+                <img src="/api/placeholder/400/250" alt="Représentation du Z1 de Konrad Zuse">
+            </div>
+        </section>
+
+        <section id="machines-electroniques">
+            <h2>L'Ère des Machines Électroniques</h2>
+            
+            <div class="timeline">
+                <div class="container left">
+                    <div class="content">
+                        <h3>Tubes à vide (1940s)</h3>
+                        <p>Les tubes à vide (ou tubes électroniques) ont remplacé les relais mécaniques, permettant des calculs beaucoup plus rapides. Ces composants ont révolutionné l'informatique naissante en introduisant l'électronique dans les calculateurs.</p>
+                    </div>
+                </div>
+                
+                <div class="container right">
+                    <div class="content">
+                        <h3>Colossus (1943)</h3>
+                        <p>Développé au Royaume-Uni pendant la Seconde Guerre mondiale, Colossus était destiné au décryptage des codes allemands. C'était le premier calculateur électronique programmable utilisant des tubes à vide.</p>
+                        <p><strong>Caractéristiques :</strong></p>
+                        <ul>
+                            <li>1500 tubes à vide</li>
+                            <li>5000 opérations par seconde</li>
+                            <li>Programmation par tableaux de connexion</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="container left">
+                    <div class="content">
+                        <h3>ENIAC (1945)</h3>
+                        <p>L'Electronic Numerical Integrator and Computer est souvent considéré comme le premier ordinateur électronique généraliste. Conçu pour calculer des tables de tir d'artillerie pour l'armée américaine.</p>
+                        <p><strong>Caractéristiques :</strong></p>
+                        <ul>
+                            <li>18 000 tubes à vide</li>
+                            <li>5000 additions par seconde</li>
+                            <li>Consommation électrique : 150 kW</li>
+                            <li>Poids : 30 tonnes</li>
+                            <li>Surface : 167 m²</li>
+                        </ul>
+                        <img src="/api/placeholder/400/250" alt="ENIAC">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="programmes-enregistres">
+            <h2>L'Ère des Programmes Enregistrés</h2>
+            
+            <div class="machine">
+                <h3>Architecture de von Neumann (1945)</h3>
+                <p>John von Neumann propose une architecture où programmes et données sont stockés dans la même mémoire. Ce concept fondamental est toujours à la base de nos ordinateurs modernes.</p>
+                <p><strong>Principes clés :</strong></p>
+                <ul>
+                    <li>Mémoire unique pour les données et les programmes</li>
+                    <li>Traitement séquentiel des instructions</li>
+                    <li>Unité arithmétique et logique (ALU) séparée</li>
+                    <li>Unité de contrôle pour gérer le flux d'instructions</li>
+                </ul>
+                <img src="/api/placeholder/400/250" alt="Architecture de von Neumann">
+            </div>
+        </section>
+
+        <section id="transistors">
+            <h2>L'Ère des Transistors</h2>
+            
+            <div class="machine">
+                <h3>Des tubes aux transistors (1950s)</h3>
+                <p>Le transistor, inventé en 1947 aux Bell Labs, remplace progressivement les tubes à vide dans les années 1950. Plus petit, plus fiable et consommant moins d'énergie, il permet le développement d'ordinateurs plus compacts.</p>
+                <p><strong>Avantages des transistors :</strong></p>
+                <ul>
+                    <li>Taille réduite par rapport aux tubes à vide</li>
+                    <li>Consommation électrique moindre</li>
+                    <li>Plus grande fiabilité</li>
+                    <li>Production de chaleur réduite</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="circuits-integres">
+            <h2>L'Ère des Circuits Intégrés</h2>
+            
+            <div class="machine">
+                <h3>Les circuits intégrés (1960s)</h3>
+                <p>Les circuits intégrés, ou puces électroniques, regroupent plusieurs transistors sur un même support. Cette innovation permet une miniaturisation encore plus poussée et une baisse des coûts de production.</p>
+                <p><strong>Évolution des circuits intégrés :</strong></p>
+                <ul>
+                    <li>1960s : Petite intégration (SSI) - quelques transistors</li>
+                    <li>1970s : Moyenne intégration (MSI) - centaines de transistors</li>
+                    <li>1970s-80s : Grande intégration (LSI) - milliers de transistors</li>
+                    <li>1980s+ : Très grande intégration (VLSI) - millions de transistors</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="micro-ordinateurs">
+            <h2>L'Ère des Micro-ordinateurs</h2>
+            
+            <div class="machine">
+                <h3>Les premiers microprocesseurs (1970s)</h3>
+                <p>L'Intel 4004, lancé en 1971, est considéré comme le premier microprocesseur commercialisé. Il ouvre la voie à l'informatique personnelle en intégrant l'unité centrale de traitement (CPU) sur une seule puce.</p>
+            </div>
+            
+            <h3>Les premiers ordinateurs familiaux (1970s-80s)</h3>
+            <p>À partir de la fin des années 1970, les premiers ordinateurs destinés au grand public font leur apparition, rendant l'informatique accessible aux particuliers.</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Modèle</th>
+                        <th>Année</th>
+                        <th>Processeur</th>
+                        <th>Fréquence</th>
+                        <th>Mémoire RAM</th>
+                        <th>Stockage</th>
+                        <th>Prix</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sinclair ZX81</td>
+                        <td>1981</td>
+                        <td>Zilog Z80A</td>
+                        <td>3,25 MHz</td>
+                        <td>1 Ko</td>
+                        <td>Cassette</td>
+                        <td>99,95 £</td>
+                    </tr>
+                    <tr>
+                        <td>Commodore 64</td>
+                        <td>1982</td>
+                        <td>MOS 6510</td>
+                        <td>0,985 MHz</td>
+                        <td>64 Ko</td>
+                        <td>Cassette/Disquette</td>
+                        <td>595 $</td>
+                    </tr>
+                    <tr>
+                        <td>Apple II</td>
+                        <td>1977</td>
+                        <td>MOS 6502</td>
+                        <td>1 MHz</td>
+                        <td>4-64 Ko</td>
+                        <td>Cassette/Disquette</td>
+                        <td>1298 $</td>
+                    </tr>
+                    <tr>
+                        <td>IBM PC</td>
+                        <td>1981</td>
+                        <td>Intel 8088</td>
+                        <td>4,77 MHz</td>
+                        <td>16-256 Ko</td>
+                        <td>Disquette</td>
+                        <td>1565 $</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="machine">
+                <h3>Évolution des capacités</h3>
+                <p>L'évolution des ordinateurs personnels a été caractérisée par une augmentation constante de leurs performances.</p>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Période</th>
+                            <th>Vitesse de travail</th>
+                            <th>Capacité de calcul</th>
+                            <th>Capacité mémoire</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1940s (ENIAC)</td>
+                            <td>~5000 opérations/s</td>
+                            <td>Opérations arithmétiques de base</td>
+                            <td>20 nombres de 10 chiffres</td>
+                        </tr>
+                        <tr>
+                            <td>1950s</td>
+                            <td>~10 000 opérations/s</td>
+                            <td>Calculs scientifiques simples</td>
+                            <td>Quelques Ko</td>
+                        </tr>
+                        <tr>
+                            <td>1960s</td>
+                            <td>~100 000 opérations/s</td>
+                            <td>Traitement par lots</td>
+                            <td>Dizaines de Ko</td>
+                        </tr>
+                        <tr>
+                            <td>1970s</td>
+                            <td>~1 MIPS</td>
+                            <td>Applications interactives simples</td>
+                            <td>Centaines de Ko</td>
+                        </tr>
+                        <tr>
+                            <td>Début 1980s</td>
+                            <td>~5 MIPS</td>
+                            <td>Interfaces graphiques simples</td>
+                            <td>64 Ko - 1 Mo</td>
+                        </tr>
+                        <tr>
+                            <td>Fin 1980s</td>
+                            <td>~20 MIPS</td>
+                            <td>Multitâche limité</td>
+                            <td>1-4 Mo</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        
+        <section id="conclusion">
+            <h2>Conclusion</h2>
+            <p>L'évolution des ordinateurs, de la machine mécanique Z1 de Konrad Zuse aux premiers ordinateurs familiaux des années 1980, illustre l'incroyable progression technologique du XXe siècle. En quelques décennies seulement, les ordinateurs sont passés de machines gigantesques réservées aux institutions gouvernementales et scientifiques à des appareils accessibles au grand public, ouvrant la voie à la révolution numérique que nous connaissons aujourd'hui.</p>
+        </section>
+    </main>
+    
+    <footer>
+        <p>© 2025 - Projet scolaire sur l'évolution des ordinateurs</p>
+        <p>Classe de Première - Lycée condorcet</p>
+    </footer>
+
+    <script>
+        // Fonction pour générer une couleur aléatoire
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+        
+        // Fonction pour changer les couleurs de la page
+        function changeColors() {
+            document.body.style.backgroundColor = getRandomColor();
+            document.body.style.color = getRandomColor();
+            
+            const header = document.querySelector('header');
+            header.style.backgroundColor = getRandomColor();
+            
+            const main = document.querySelector('main');
+            main.style.backgroundColor = getRandomColor();
+            
+            const h2Elements = document.querySelectorAll('h2');
+            h2Elements.forEach(h2 => {
+                h2.style.color = getRandomColor();
+                h2.style.borderBottomColor = getRandomColor();
+            });
+            
+            const h3Elements = document.querySelectorAll('h3');
+            h3Elements.forEach(h3 => {
+                h3.style.color = getRandomColor();
+            });
+            
+            const machineElements = document.querySelectorAll('.machine');
+            machineElements.forEach(machine => {
+                machine.style.backgroundColor = getRandomColor();
+                machine.style.borderLeftColor = getRandomColor();
+            });
+            
+            const thElements = document.querySelectorAll('th');
+            thElements.forEach(th => {
+                th.style.backgroundColor = getRandomColor();
+                th.style.color = getRandomColor();
+            });
+            
+            const tdElements = document.querySelectorAll('td');
+            tdElements.forEach(td => {
+                td.style.borderColor = getRandomColor();
+            });
+            
+            const timeline = document.querySelector('.timeline::after');
+            if (timeline) timeline.style.backgroundColor = getRandomColor();
+            
+            const containerAfter = document.querySelectorAll('.container::after');
+            containerAfter.forEach(container => {
+                container.style.backgroundColor = getRandomColor();
+                container.style.borderColor = getRandomColor();
+            });
+            
+            const contentElements = document.querySelectorAll('.content');
+            contentElements.forEach(content => {
+                content.style.backgroundColor = getRandomColor();
+            });
+        }
+        
+        // Variables pour l'animation
+        let colorInterval;
+        let isAnimating = false;
+        
+        // Fonction pour démarrer/arrêter l'animation
+        function toggleColorAnimation() {
+            if (isAnimating) {
+                clearInterval(colorInterval);
+                isAnimating = false;
+                
+                // Remettre les couleurs par défaut
+                document.body.style.backgroundColor = '#f5f5f5';
+                document.body.style.color = '#333';
+                document.querySelector('header').style.backgroundColor = '#3498db';
+                document.querySelector('main').style.backgroundColor = 'white';
+                
+                const h2Elements = document.querySelectorAll('h2');
+                h2Elements.forEach(h2 => {
+                    h2.style.color = '#2980b9';
+                    h2.style.borderBottomColor = '#2980b9';
+                });
+                
+                const h3Elements = document.querySelectorAll('h3');
+                h3Elements.forEach(h3 => {
+                    h3.style.color = '#2c3e50';
+                });
+                
+                const machineElements = document.querySelectorAll('.machine');
+                machineElements.forEach(machine => {
+                    machine.style.backgroundColor = '#f9f9f9';
+                    machine.style.borderLeftColor = '#3498db';
+                });
+                
+                const thElements = document.querySelectorAll('th');
+                thElements.forEach(th => {
+                    th.style.backgroundColor = '#3498db';
+                    th.style.color = 'white';
+                });
+                
+                const contentElements = document.querySelectorAll('.content');
+                contentElements.forEach(content => {
+                    content.style.backgroundColor = 'white';
+                });
+                
+                // Réinitialiser les lignes de table
+                const trEvenElements = document.querySelectorAll('tr:nth-child(even)');
+                trEvenElements.forEach(tr => {
+                    tr.style.backgroundColor = '#f2f2f2';
+                });
+            } else {
+                colorInterval = setInterval(changeColors, 100); // Change les couleurs toutes les 100ms
+                isAnimating = true;
+            }
+        }
+        
+        // Écouter la combinaison de touches Alt+R
+        document.addEventListener('keydown', function(event) {
+            if (event.altKey && event.key === 'r') {
+                toggleColorAnimation();
+                event.preventDefault(); // Empêche le comportement par défaut du navigateur
+            }
+        });
+    </script>
+</body>
+</html>
